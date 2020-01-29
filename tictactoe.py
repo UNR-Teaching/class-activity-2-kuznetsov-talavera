@@ -24,7 +24,7 @@ class Board(object):
 
         :return: ????
         """
-        if column < 3 and row < 3:
+        if column < 3 and row < 3 and self.board[row][column] == '_':
             legal = True
         else:
             legal = False
@@ -49,6 +49,10 @@ class Board(object):
         :return: (str) the letter representing the player who won
         """
         self.mark_square(0,1,'X')
+        print(self.board)
+        self.mark_square(0,1,'O')
+        print(self.board)
+        self.mark_square(0,2,'O')
         print(self.board)
         
         
