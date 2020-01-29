@@ -50,10 +50,7 @@ class Board(object):
         """
         self.mark_square(0,1,'X')
         print(self.board)
-        self.mark_square(0,1,'O')
-        print(self.board)
-        self.mark_square(0,2,'O')
-        print(self.board)
+        
         
         
         
