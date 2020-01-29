@@ -24,7 +24,7 @@ class Board(object):
 
         :return: ????
         """
-        if column < 3 and row < 3:
+        if column < 3 and row < 3 and self.board[row][column] == '_':
             legal = True
         else:
             legal = False
