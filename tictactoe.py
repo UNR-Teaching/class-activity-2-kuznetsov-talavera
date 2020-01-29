@@ -38,7 +38,21 @@ class Board(object):
 
         :return: ????
         """
-        return False
+        win = False
+        for i in range(3):
+            row = self.board[i]
+            if row[0] != '_' and row[0] == row[1] and row[0] == row[2]:
+                win = True
+        for i in range(3):
+            row = self.board[:, i]
+            if row[0] != '_' and row[0] == row[1] and row[0] == row[2]:
+                win = True
+        # check diagonals
+        if self.board[0][0] != '_' and self.board[0][0] == self.board[1][1] and self.board[0][0] == self.board[2][2]:
+            win = True
+        if self.board[0][2] != '_' and self.board[0][2] == self.board[1][1] and self.board[2][0] == self.board[1][1]:
+            win = True
+        return win
         
 
     def play_game(self):
@@ -57,6 +71,10 @@ class Board(object):
                 player = 'O'
             else:
                 player = 'X'
+        if player == 'O':
+            return "Player 1"
+        else:
+            return "Player 2"
         
         
         
