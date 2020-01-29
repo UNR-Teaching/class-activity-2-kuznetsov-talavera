@@ -1,7 +1,7 @@
+import numpy as np
 """ Note: Although the skeleton below is in Python, you may use any programming language you want so long as the language supports object-oriented programming, 
           and you make use of relevant object-oriented design principles.
 """
-~~~~~~~~~~~~
 
 class Board(object):
 
@@ -9,8 +9,8 @@ class Board(object):
         """
         Initializes the Board of size 3x3
         """
-
-        pass
+        board = np.zeros((3,3))
+        
 
     def mark_square(self, column, row, player):
         """
@@ -22,8 +22,10 @@ class Board(object):
 
         :return: ????
         """
-
-        pass
+        legal = if column < 3 and row < 3
+        if legal
+            board[row][column] = player
+        
 
     def has_winner(self):
         """
