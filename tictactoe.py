@@ -9,7 +9,9 @@ class Board(object):
         """
         Initializes the Board of size 3x3
         """
-        board = np.zeros((3,3))
+        self.board = np.chararray((3,3), unicode=True)
+        self.board[:] = '_'
+        print(self.board)
         
 
     def mark_square(self, column, row, player):
@@ -22,9 +24,12 @@ class Board(object):
 
         :return: ????
         """
-        legal = if column < 3 and row < 3
-        if legal
-            board[row][column] = player
+        if column < 3 and row < 3:
+            legal = True
+        else:
+            legal = False
+        if legal:
+            self.board[row][column] = player
         
 
     def has_winner(self):
@@ -43,8 +48,10 @@ class Board(object):
         
         :return: (str) the letter representing the player who won
         """
+        self.mark_square(0,1,'X')
+        print(self.board)
         
-        pass
+        
         
 if __name__ == '__main__':
     board = Board()
