@@ -38,8 +38,8 @@ class Board(object):
 
         :return: ????
         """
-
-        pass
+        return False
+        
 
     def play_game(self):
         """
@@ -48,8 +48,15 @@ class Board(object):
         
         :return: (str) the letter representing the player who won
         """
-        self.mark_square(0,1,'X')
-        print(self.board)
+        player = 'X'
+        while self.has_winner() == False:
+            row, column = input("Please enter your row and column move: ").split()
+            self.mark_square(int(column), int(row), player)
+            print(self.board)
+            if player == 'X':
+                player = 'O'
+            else:
+                player = 'X'
         
         
         
