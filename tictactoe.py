@@ -11,7 +11,7 @@ class Board(object):
         """
         self.board = np.chararray((3,3), unicode=True)
         self.board[:] = '_'
-        print(self.board)
+        #print(self.board)
         
 
     def mark_square(self, column, row, player):
@@ -30,6 +30,8 @@ class Board(object):
             legal = False
         if legal:
             self.board[row][column] = player
+        print(self.board)
+        return legal
         
 
     def has_winner(self):
